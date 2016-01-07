@@ -1,20 +1,29 @@
 {
-    "Name": "ModJamAssets",
-    "Summary": "Art assets to be used for the mod jam.",
-    "Description": "",
-    "Website": "Devotus.github.io/TUG-ModJamAssets",
-    "Icon": "",
-    "Active": false,
-    "TargetGame": {
-        "Name": "TUG"
+  "Name": "ModJamAssets",
+  "Summary": "Art assets to be used for the mod jam.",
+  "Description": "This is a collection of art assets to be used as a starting point for the mod jam.  The assets included in this package are:\n* Bronze Bomb\n* Caltrop\n* Coconut Grenade\n* Land Mine\n* Leg Trap (3 parts)\n* Neuria Device\n* Pressure Plate\n* Stone Launcher\n* Wood Lever (2 parts)\n\nIf you set this mod as a dependency of the mods you create, this mod will be packaged with your mod's distribution ZIP file.",
+  "Website": "Devotus.github.io/TUG-ModJamAssets",
+  "Icon": "",
+  "Active": true,
+  "TargetGame": {
+    "Name": "TUG"
+  },
+  "Authors": [
+    {
+      "GitUsername": "Maylyon",
+      "NkUsername": "Maylyon",
+      "Email": "maylyon@nerdkingdom.com"
     },
-    "Authors": [
-        {
-            "GitUsername": "Maylyon",
-            "NkUsername": "Maylyon",
-            "Email": "maylyon@nerdkingdom.com"
-        }
-    ],
-    "Dependencies": [],
-    "Categories": []
+    {
+      "GitUsername": "JohnyCilohokla",
+      "NkUsername": "JohnyCilohokla",
+      "Email": "johny@nerdkingdom.com"
+    }
+  ],
+  "Dependencies": [],
+  "Categories": [
+    "Miscellaneous",
+    "Technology"
+  ],
+  "Media": []
 }
