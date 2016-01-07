@@ -1,0 +1,20 @@
+{
+    "Name": "ModJamAssets",
+    "Summary": "Art assets to be used for the mod jam.",
+    "Description": "",
+    "Website": "Devotus.github.io/TUG-ModJamAssets",
+    "Icon": "",
+    "Active": false,
+    "TargetGame": {
+        "Name": "TUG"
+    },
+    "Authors": [
+        {
+            "GitUsername": "Maylyon",
+            "NkUsername": "Maylyon",
+            "Email": "maylyon@nerdkingdom.com"
+        }
+    ],
+    "Dependencies": [],
+    "Categories": []
+}
