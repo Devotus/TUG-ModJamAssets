@@ -1,0 +1,78 @@
+GameObjects
+{
+	PlaceableObject
+	{
+		Pressure Plate
+		{
+			Tag = "Traps"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPdestroy = 2
+					LBPdestroy = 2
+					XPdestroy = 4
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/Pressure_plate.obj"
+				dontCastShadows = 1.0
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/pressure_plate_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/pressure_plate_norm.tga"
+				}
+			}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 20.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/Pressure_plate.obj"
+						material = "METAL"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+
+			Placeable
+			{
+				name = "Pressure Plate"
+				icon = "pressure_plate_icon"
+				minScale = 1.0
+				maxScale = 1.0
+				placementSound = "GrassPlace"
+				removalSound = "GrassDig"
+				miningEmitter = "Strike WoodLight Emitter"
+				durabilityLossOnCorrect = 2.0
+				durabilityLossOnIncorrect = 8.0
+				category = "Metal"
+				tier = 2
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+			}
+		}
+		
+	}
+}

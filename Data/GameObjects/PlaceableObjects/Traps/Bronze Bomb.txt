@@ -1,0 +1,83 @@
+GameObjects
+{
+	PlaceableObject
+	{
+		Bronze Bomb
+		{
+			Tag = "Traps"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPdestroy = 2
+					LBPdestroy = 2
+					XPdestroy = 4
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/bronze_bomb.obj"
+				dontCastShadows = 1.0
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/bronze_bomb_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/bronze_bomb_norm.tga"
+				}
+				Glow   
+				{
+					0 = "Models/PlaceableObjects/Traps/bronze_bomb_glow.tga"
+				}		
+			}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 5.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/bronze_bomb.obj"
+						material = "METAl"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+
+			Placeable
+			{
+				name = "Bronze Bomb"
+				icon = "Bronze Bomb Icon"
+				minScale = 1.0
+				maxScale = 1.0
+				placementSound = "GrassPlace"
+				removalSound = "GrassDig"
+				miningEmitter = "Strike WoodLight Emitter"
+				durabilityLossOnCorrect = 2.0
+				durabilityLossOnIncorrect = 8.0
+				category = "Wood"
+				tier = 2
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				health = 200
+			}
+		}
+		
+	}
+}

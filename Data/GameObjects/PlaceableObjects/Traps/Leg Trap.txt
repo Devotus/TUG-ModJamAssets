@@ -1,0 +1,239 @@
+
+GameObjects
+{
+	PlaceableObject
+	{
+		Leg Trap
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/leg_trap_base.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_norm.tga"
+				}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 90.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/leg_trap_base.obj"
+						material = "METAL"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Leg Trap"
+				icon = "leg_trap"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "WoodPlace"
+			}
+		}
+		
+		Leg Trap Top
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/leg_trap_top.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_norm.tga"
+				}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 90.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/leg_trap_base.obj"
+						material = "METAL"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Leg Trap"
+				//icon = "leg_trap"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "WoodPlace"
+			}
+		}
+		Leg Trap Arm
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/leg_trap_arm.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/leg_trap_norm.tga"
+				}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 90.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/leg_trap_base.obj"
+						material = "METAL"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Leg Trap"
+				//icon = "leg_trap"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "WoodPlace"
+			}
+		}
+	}
+}

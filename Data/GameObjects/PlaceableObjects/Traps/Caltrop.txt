@@ -1,0 +1,90 @@
+GameObjects
+{
+	PlaceableObject
+	{
+		Caltrop
+		{
+			Tag = "Traps"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				arguments
+				{
+					HitPoints = 200
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/caltrop.obj"
+				dontCastShadows = 1.0
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/caltrop_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/caltrop_norm.tga"
+				}
+			}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 50.0
+						convex = 0
+					}
+
+					Box
+					{
+						trigger = 1
+						extents = <5.0, 4.0, 5.0>
+						center = <0.0, 1.5, 0.0>
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+
+			Placeable
+			{
+				name = "Caltrop"
+				icon = "caltrop_icon"
+				minScale = 1.0
+				maxScale = 1.0
+				placementSound = "GrassPlace"
+				removalSound = "GrassDig"
+				miningEmitter = "Strike WoodLight Emitter"
+				durabilityLossOnCorrect = 2.0
+				durabilityLossOnIncorrect = 8.0
+				category = "Wood"
+				tier = 2
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				health = 200
+			}
+			Children
+			{
+				Roam Fly Spiked Pit Trap Emitter
+				{
+					offset = <0.0, 2.0, 0.0>
+				}
+				Swarm Firefly Aqua Emitter
+				{
+					offset = <0.0, 2.5, 0.0>
+				}
+			}
+		}
+		
+	}
+}

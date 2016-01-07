@@ -1,0 +1,169 @@
+
+GameObjects
+{
+	PlaceableObject
+	{
+		Wood Lever
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/wood_lever_base.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/wood_lever_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/wood_lever_norm.tga"
+				}
+				#Specular
+				#{
+				#	0 = "Models/PlaceableObjects/Traps/wood_lever_spec.tga"
+				#}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 400.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/wood_lever_base.obj"
+						material = "WOOD"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Wood Lever"
+				icon = "wood_lever"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "WoodPlace"
+			}
+		}
+		Wood Lever Handle
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/wood_lever_handle.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/wood_lever_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/wood_lever_norm.tga"
+				}				
+				#Specular
+				#{
+				#	0 = "Models/PlaceableObjects/Traps/wood_lever_spec.tga"
+				#}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 400.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/wood_lever_handle.obj"
+						material = "WOOD"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Wood Lever"
+				//icon = "wood_lever"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "WoodPlace"
+			}
+		}
+	}
+}

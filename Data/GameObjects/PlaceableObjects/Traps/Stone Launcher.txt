@@ -1,0 +1,84 @@
+
+GameObjects
+{
+	PlaceableObject
+	{
+		Stone Launcher
+		{
+			Tag = "Trap"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPcraft = 4
+					LBPcraft = 4
+					XPcraft = 8
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/stone_launcher.obj"
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/stone_launcher_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/stone_launcher_norm.tga"
+				}
+			}
+			#RigidBody
+			#{
+			#	activePhysics = 0
+			#	mass = 100.0
+			#	friction = 100.0
+			#}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 800.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/stone_launcher.obj"
+						material = "STONE"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+			Placeable
+			{
+				name = "Stone Launcher"
+				icon = "stone_launcher"
+				minScale = 1.0
+				maxScale = 1.0
+				
+				category = "Trap"
+				tier = 3
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				
+				survivalFaceCamera = 1
+				survivalRotOffset = [0.0, 1.0, 0.0, 180.0]
+				
+				placementSound = "StonePlace"
+			}
+		}
+	}
+}

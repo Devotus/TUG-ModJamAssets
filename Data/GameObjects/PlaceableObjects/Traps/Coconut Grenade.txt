@@ -1,0 +1,91 @@
+GameObjects
+{
+	PlaceableObject
+	{
+		Coconut Grenade 
+		{
+			Tag = "Traps"
+			
+			Transform
+			{
+			}
+			Script
+			{
+				file = "Scripts/Objects/PlaceableObject.lua"
+				class = "PlaceableObject"
+				arguments
+				{
+					encumbrance = 1
+
+					dataMetricCategory = "Trap"
+					UBPdestroy = 2
+					LBPdestroy = 2
+					XPdestroy = 4
+				}
+			}
+			StaticGraphics
+			{
+				model = "Models/PlaceableObjects/Traps/coconut_grenade.obj"
+				dontCastShadows = 1.0
+				Diffuse
+				{
+					0 = "Models/PlaceableObjects/Traps/coconut_grenade_diff.tga"
+				}
+				Normal
+				{
+					0 = "Models/PlaceableObjects/Traps/coconut_grenade_norm.tga"
+				}
+			}
+			Physics
+			{
+				Colliders
+				{
+					Mesh
+					{
+						mass = 5.0
+						convex = 1
+						mesh = "Models/PlaceableObjects/Traps/coconut_grenade.obj"
+						material = "WOOD"
+					}
+				}
+
+				Rigidbody
+				{
+					keyframed = 1
+				}
+			}
+
+			Placeable
+			{
+				name = "Coconut Grenade"
+				icon = "coconut_grenade_icon"
+				minScale = 1.0
+				maxScale = 1.0
+				placementSound = "GrassPlace"
+				removalSound = "GrassDig"
+				miningEmitter = "Strike WoodLight Emitter"
+				durabilityLossOnCorrect = 2.0
+				durabilityLossOnIncorrect = 8.0
+				category = "Wood"
+				tier = 2
+				resource = 1
+				maxStackCount = 1
+				placeWithNoPhysics = 1
+				health = 200
+			}
+			#Children
+			#{
+			#	Fuse Emitter
+			#	{
+			#		offset = <0.0, 0.7, 0.0>
+			#	}
+			#	Fuse Attractor
+			#	{
+			#		offset = <0.0, 0.7, 0.0>
+			#		emitter = "Fuse Emitter"
+			#	}
+			#}
+		}
+		
+	}
+}
